@@ -10,6 +10,10 @@
   padding: 1.5rem 1rem 0;
 }
 
+.container-wide {
+  max-width: 980px;
+}
+
 /* Top Header */
 .site-header {
   background: linear-gradient(180deg, #c9eeff 0%, #e9f8ff 100%);
@@ -123,8 +127,30 @@
   font-size: 0.98rem;
 }
 
-.home-actions {
+.home-feature {
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(45, 169, 255, 0.08);
+  border: 1px solid rgba(45, 169, 255, 0.25);
   display: grid;
+  gap: 0.5rem;
+}
+
+.home-feature h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0a3958;
+}
+
+.home-feature p {
+  margin: 0;
+  color: #3a5b70;
+  line-height: 1.55;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   margin-top: 0.4rem;
 }
@@ -132,10 +158,11 @@
 .home-actions a {
   text-decoration: none;
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   font-weight: 600;
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  width: fit-content;
 }
 
 .primary-cta {

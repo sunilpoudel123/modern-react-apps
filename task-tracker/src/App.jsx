@@ -94,15 +94,25 @@ function App() {
             Experience the future of business automation with Task Tracker! A
             mobile-first solution powered by AI that digitizes and automates
             every business department, making team collaboration effortless and
-            organized. Task Tracker&apos;s
-            user-friendly interface ensures that you can say goodbye to
-            complexity and hello to a simpler, more efficient way of working
-            together for business growth.
+            organized. Task Tracker&apos;s user-friendly interface ensures that
+            you can say goodbye to complexity and hello to a simpler, more
+            efficient way of working together for business growth.
           </p>
-          <div className="home-actions" role="group" aria-label="Get started">
-            <a className="primary-cta" href="#/demo">
-              Request a Demo
-            </a>
+            <div className="home-actions" role="group" aria-label="Get started">
+                <a className="primary-cta" href="#/demo">
+                    Request a Demo
+                </a>
+            </div>
+          <div className="home-feature">
+            <h3>Versatile Solution for All Industries</h3>
+            <p>
+              Task Tracker is the perfect tool for business management, designed
+              to meet diverse needs across industries and company sizes. Whether
+              you&apos;re a small startup or a large enterprise, it provides the
+              flexibility and efficiency you need to thrive anywhere in the
+              world. Want a better way to manage every department? Task Tracker
+              is your go-to solution for that.
+            </p>
           </div>
         </section>
       )
@@ -187,7 +197,7 @@ function App() {
         </div>
       </header>
 
-      <div className="container">
+      <div className={`container ${route === 'home' ? 'container-wide' : ''}`}>
         {renderPage()}
 
         {route === 'tasks' && <TaskForm onAdd={addTask} />}
