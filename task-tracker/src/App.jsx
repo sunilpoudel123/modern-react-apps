@@ -84,9 +84,26 @@ function App() {
   const renderPage = () => {
     if (route === 'home') {
       return (
-        <section className="section-card">
-          <h2>Home</h2>
-          <p>Your task tracker hub for daily focus and momentum.</p>
+        <section className="section-card home-hero">
+          <p className="home-kicker">Simplify. Organize. Automate.</p>
+          <h2 className="home-title">
+            Track Tasks, Coordinate Teams, and Monitor Performance - All in One
+            Place!
+          </h2>
+          <p className="home-subtitle">
+            Experience the future of business automation with Task Tracker! A
+            mobile-first solution powered by AI that digitizes and automates
+            every business department, making team collaboration effortless and
+            organized. Task Tracker&apos;s
+            user-friendly interface ensures that you can say goodbye to
+            complexity and hello to a simpler, more efficient way of working
+            together for business growth.
+          </p>
+          <div className="home-actions" role="group" aria-label="Get started">
+            <a className="primary-cta" href="#/demo">
+              Request a Demo
+            </a>
+          </div>
         </section>
       )
     }

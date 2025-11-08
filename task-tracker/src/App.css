@@ -93,6 +93,73 @@
   color: #3a5b70;
 }
 
+/* Home Hero */
+.home-hero {
+  display: grid;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.home-kicker {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1c6ea3;
+  font-size: 0.78rem;
+}
+
+.home-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: #0a3958;
+}
+
+.home-subtitle {
+  margin: 0;
+  color: #3a5b70;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.home-actions {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.home-actions a {
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.primary-cta {
+  background: linear-gradient(135deg, #2da9ff 0%, #1f95e6 100%);
+  color: white;
+  box-shadow: 0 6px 14px rgba(45, 169, 255, 0.35);
+}
+
+.primary-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(45, 169, 255, 0.45);
+}
+
+.secondary-cta {
+  background: white;
+  color: #0a3958;
+  border: 1px solid rgba(10, 57, 88, 0.2);
+}
+
+.secondary-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(10, 57, 88, 0.12);
+}
+
 /* About Me */
 .about-card {
   background: rgba(255, 255, 255, 0.95);
