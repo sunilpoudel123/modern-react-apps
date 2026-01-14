@@ -98,11 +98,11 @@ function App() {
             you can say goodbye to complexity and hello to a simpler, more
             efficient way of working together for business growth.
           </p>
-            <div className="home-actions" role="group" aria-label="Get started">
-                <a className="primary-cta" href="#/demo">
-                    Request a Demo
-                </a>
-            </div>
+          <div className="home-actions" role="group" aria-label="Get started">
+            <a className="primary-cta" href="#/demo">
+              Request a Demo
+            </a>
+          </div>
           <div className="home-feature">
             <h3>Versatile Solution for All Industries</h3>
             <p>
@@ -118,11 +118,46 @@ function App() {
       )
     }
 
-    if (route === 'pages') {
+    if (route === 'features') {
       return (
         <section className="section-card">
-          <h2>Pages</h2>
-          <p>Quick access to your workspace: tasks, events, blog, and profile.</p>
+          <h2>Features</h2>
+
+          <h3>Attendance Management</h3>
+          <p>Mark attendance</p>
+          <p>
+            Hassle-free attendance marking with a mobile phone with GPS-based
+            geo-location capturing. Making attendance management flexible and
+            monitoring better.
+          </p>
+
+          <h3>Workflow Management</h3>
+          <p>Leave management</p>
+          <p>
+            Manage the leave cycle effectively from leave request to approval
+            easily. No email threads, no tagging number of people for approvals.
+            Just raise a request from the app and tag your HR. You would get a
+            notification of each step till approval. Simple, easy, and
+            effective.
+          </p>
+
+          <h3>Collaboration</h3>
+          <p>Calendar view</p>
+          <p>
+            Get a complete view of your tasks on a weekly and monthly basis in
+            calendar format.
+          </p>
+
+          <h3>Reporting</h3>
+          <p>Multiple shift</p>
+          <p>
+            The multiple shift feature offers a panel that allows you to set
+            different shift timings for employees, automatically recording their
+            punch-in times to accurately track attendance, including late
+            arrivals, present days, holidays, absences, and leave.
+          </p>
+
+          <h3>AI/ML</h3>
         </section>
       )
     }
@@ -187,8 +222,8 @@ function App() {
             <span className="brand-tagline">Plan, track, and finish strong</span>
           </div>
           <nav className="app-nav" aria-label="Primary">
-            <a href="#/pages">Pages</a>
             <a href="#/home">Home</a>
+            <a href="#/features">Features</a>
             <a href="#/tasks">My Tasks</a>
             <a href="#/events">Events</a>
             <a href="#/blog">Blog</a>
@@ -233,8 +268,8 @@ function App() {
             <span className="brand-tagline">Keep your day on track</span>
           </div>
           <nav className="app-nav" aria-label="Footer">
-            <a href="#/pages">Pages</a>
             <a href="#/home">Home</a>
+            <a href="#/features">Features</a>
             <a href="#/tasks">My Tasks</a>
             <a href="#/events">Events</a>
             <a href="#/blog">Blog</a>
