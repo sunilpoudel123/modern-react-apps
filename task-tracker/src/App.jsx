@@ -9,6 +9,7 @@ function App() {
   const [tasks, setTasks] = useState([])
   const [filter, setFilter] = useState('all') // 'all', 'active', 'completed'
   const [route, setRoute] = useState('home')
+  const [featureTab, setFeatureTab] = useState('attendance')
 
   const getRouteFromHash = () => {
     const hash = window.location.hash || '#/home'
@@ -119,45 +120,133 @@ function App() {
     }
 
     if (route === 'features') {
+      const featureTabs = [
+        { id: 'attendance', label: 'Attendance Management' },
+        { id: 'workflow', label: 'Workflow Management' },
+        { id: 'collaboration', label: 'Collaboration' },
+        { id: 'reporting', label: 'Reporting' },
+        { id: 'aiml', label: 'AI/ML' }
+      ]
+
       return (
-        <section className="section-card">
+        <section className="section-card feature-page">
           <h2>Features</h2>
+          <div className="feature-tabs" role="tablist" aria-label="Features">
+            {featureTabs.map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                className={`feature-tab ${
+                  featureTab === tab.id ? 'active' : ''
+                }`}
+                role="tab"
+                aria-selected={featureTab === tab.id}
+                onClick={() => setFeatureTab(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
 
-          <h3>Attendance Management</h3>
-          <p>Mark attendance</p>
-          <p>
-            Hassle-free attendance marking with a mobile phone with GPS-based
-            geo-location capturing. Making attendance management flexible and
-            monitoring better.
-          </p>
+          <div className="feature-panel" role="tabpanel">
+            {featureTab === 'attendance' && (
+              <div className="feature-block">
+                <h3>Attendance Management</h3>
+                <div className="feature-item">
+                  <h4>Daily tasking</h4>
+                  <p>
+                    Keep track of daily workflow by adding tasks, assigning them
+                    to the team, and getting regular updates on them.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <h4>Recurring Task management</h4>
+                  <p>
+                    Set reminders for recurring tasks and cut out the effort to
+                    add a task daily. An automatic update would be sent each for
+                    the recurring tasks.
+                  </p>
+                </div>
+              </div>
+            )}
 
-          <h3>Workflow Management</h3>
-          <p>Leave management</p>
-          <p>
-            Manage the leave cycle effectively from leave request to approval
-            easily. No email threads, no tagging number of people for approvals.
-            Just raise a request from the app and tag your HR. You would get a
-            notification of each step till approval. Simple, easy, and
-            effective.
-          </p>
+            {featureTab === 'workflow' && (
+              <div className="feature-block">
+                <h3>Workflow Management</h3>
+                <div className="feature-item">
+                  <h4>Instant messaging</h4>
+                  <p>
+                    Connect easily with team members, managers, project
+                    coordinators, etc via instant messaging. Share remarks,
+                    updates, and notifications on the tasks to make
+                    communication smooth.
+                  </p>
+                </div>
+              </div>
+            )}
 
-          <h3>Collaboration</h3>
-          <p>Calendar view</p>
-          <p>
-            Get a complete view of your tasks on a weekly and monthly basis in
-            calendar format.
-          </p>
+            {featureTab === 'collaboration' && (
+              <div className="feature-block">
+                <h3>Collaboration</h3>
+                <div className="feature-item">
+                  <h4>Voice notes</h4>
+                  <p>
+                    Use the power of voice to send instructions, task updates,
+                    and any other information. No need to type out everything.
+                  </p>
+                </div>
+              </div>
+            )}
 
-          <h3>Reporting</h3>
-          <p>Multiple shift</p>
-          <p>
-            The multiple shift feature offers a panel that allows you to set
-            different shift timings for employees, automatically recording their
-            punch-in times to accurately track attendance, including late
-            arrivals, present days, holidays, absences, and leave.
-          </p>
+            {featureTab === 'reporting' && (
+              <div className="feature-block">
+                <h3>Reporting</h3>
+                <div className="feature-item">
+                  <h4>Info graphic Reporting</h4>
+                  <p>
+                    Use the power of voice to send instructions, task updates,
+                    and any other information. No need to type out everything.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <h4>Time sheet</h4>
+                  <p>
+                    Use the power of voice to send instructions, task updates,
+                    and any other information. No need to type out everything.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <h4>Automated Summary</h4>
+                  <p>
+                    Keep up-to-date on your team&apos;s daily activities by
+                    receiving daily automated summary reports on WhatsApp.
+                  </p>
+                </div>
+              </div>
+            )}
 
-          <h3>AI/ML</h3>
+            {featureTab === 'aiml' && (
+              <div className="feature-block">
+                <h3>AI/ML</h3>
+                <div className="feature-item">
+                  <h4>Personalization</h4>
+                  <p>
+                    Smart algorithms predict user needs and suggest relevant
+                    content or services, enhancing engagement and simplifying
+                    the experience.
+                  </p>
+                </div>
+                <div className="feature-item">
+                  <h4>Resource optimization</h4>
+                  <p>
+                    Predicts peak usage times to manage resources efficiently,
+                    ensuring smooth performance, cost savings, and better system
+                    reliability.
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
         </section>
       )
     }

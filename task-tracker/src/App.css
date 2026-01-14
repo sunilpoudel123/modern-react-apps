@@ -187,6 +187,76 @@
   box-shadow: 0 6px 12px rgba(10, 57, 88, 0.12);
 }
 
+/* Features */
+.feature-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.feature-tab {
+  border: 1px solid rgba(10, 57, 88, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  color: #0a3958;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-tab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(10, 57, 88, 0.12);
+}
+
+.feature-tab.active {
+  background: linear-gradient(135deg, #4fb7ff 0%, #2da9ff 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 6px 14px rgba(45, 169, 255, 0.35);
+}
+
+.feature-panel {
+  background: white;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 14px rgba(10, 57, 88, 0.1);
+}
+
+.feature-block {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.feature-block h3 {
+  margin: 0;
+  color: #0a3958;
+}
+
+.feature-item {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.feature-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1c6ea3;
+}
+
+.feature-item p {
+  margin: 0;
+  color: #3a5b70;
+  line-height: 1.6;
+}
+
 /* About Me */
 .about-card {
   background: rgba(255, 255, 255, 0.95);
